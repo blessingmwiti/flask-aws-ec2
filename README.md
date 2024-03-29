@@ -50,6 +50,8 @@ Verify if it works by running
 ```bash
 python app.py
 ```
+Or you can upload your files using Filezilla SMTP Protocal by providing a .ppk private key generated when creating a new instance, input your public ipv4 dns as hostname, and a username according to your AMI, in this case we used Ubuntu, our username will be ubuntu, use 22 as the port, and connect
+
 Run Gunicorn WSGI server to serve the Flask Application
 When you “run” flask, you are actually running Werkzeug’s development WSGI server, which forward requests from a web server.
 Since Werkzeug is only for development, we have to use Gunicorn, which is a production-ready WSGI server, to serve our application.
@@ -106,7 +108,7 @@ Finally, we set up Nginx as a reverse-proxy to accept the requests from the user
 
 Install Nginx 
 ```bash
-sudo apt-get nginx
+sudo apt install nginx
 ```
 Start the Nginx service and go to the Public IP address of your EC2 on the browser to see the default nginx landing page
 ```bash
@@ -123,7 +125,7 @@ upstream flaskhelloworld {
     server 127.0.0.1:8000;
 }
 ```
-Add a proxy_pass to flaskhelloworld atlocation /
+Add a proxy_pass to flaskhelloworld at location /
 ```bash
 location / {
     proxy_pass http://flaskhelloworld;
