@@ -131,6 +131,10 @@ location / {
     proxy_pass http://flaskhelloworld;
 }
 ```
+Make sure you have deleted the following line after adding the above at location /
+```bash
+try_files $uri $uri/ =404;
+```
 Restart Nginx 
 ```bash
 sudo systemctl restart nginx
