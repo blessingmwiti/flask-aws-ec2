@@ -137,4 +137,5 @@ sudo systemctl restart nginx
 ```
 
 Go to your Instance page and open your Public ipv4 address
+
 Tada! Our application is up!
