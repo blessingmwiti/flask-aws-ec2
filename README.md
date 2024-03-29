@@ -50,7 +50,7 @@ Verify if it works by running
 ```bash
 python app.py
 ```
-Or you can upload your files using Filezilla SMTP Protocal by providing a .ppk private key generated when creating a new instance, input your public ipv4 dns as hostname, and a username according to your AMI, in this case we used Ubuntu, our username will be ubuntu, use 22 as the port, and connect
+Or you can upload your files using Filezilla SMTP Protocal by providing a .ppk private key generated when creating a new instance, input your public ipv4 dns as hostname, and a username according to your AMI, in this case we used Ubuntu, our username will be ubuntu, use 22 as the port, and connect. Here is a [tutorial](https://comtechies.com/how-to-upload-and-download-files-in-amazon-aws-ec2-instance.html)
 
 Run Gunicorn WSGI server to serve the Flask Application
 When you “run” flask, you are actually running Werkzeug’s development WSGI server, which forward requests from a web server.
